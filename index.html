@@ -1,0 +1,725 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Battery Text</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .grey {
+            background-color: lightgray
+        }
+    
+        .box {
+            background-color: lightgrey;
+            width: 250px;
+            height: 75px;
+            border: 5px solid green;
+            margin: 10px;
+        }
+    
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            margin-top:30px;
+            padding: 10px;
+        }
+    
+            .grid-container > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+                height: 70px
+            }
+    
+        .item1 {
+            grid-column-start: 1;
+            grid-column-start: 3;
+        }
+    
+        .itemx {
+            grid-column-start: 0;
+            grid-column-start: 4;
+        }
+    
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+    
+            .grid-container2 > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+                height: 150px
+            }
+    
+        .item1 {
+            grid-column-start: 1;
+            grid-column-start: 3;
+        }
+    
+        .itemx {
+            grid-column-start: 0;
+            grid-column-start: 4;
+        }
+    
+        .grid-container3 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+        }
+    
+            .grid-container3 > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                font-size: 20px;
+                height: 50px
+            }
+    
+        .item1 {
+            grid-column-start: 1;
+            grid-column-start: 3;
+        }
+    
+        .itemx {
+            grid-column-start: 0;
+            grid-column-start: 4;
+        }
+        .bracket {
+        border-top: 20px;
+        border-bottom: 20px;
+        border-right: none;
+        border-left: 5px solid black;
+    }
+        .bracket:after {
+            content: ']'
+        }
+
+        .bracket:before {
+            content: '['
+        }
+        input[type=checkbox] {
+        -ms-transform: scale(2);
+        -moz-transform: scale(2);
+        -webkit-transform: scale(2);
+        -o-transform: scale(2);
+        transform: scale(2);
+        padding: 10px;
+    }
+
+    .checkboxtext {
+        font-size: 110%;
+        display: inline;
+    }
+    input#yes1{
+        margin-left: 115px;
+    }
+    input#yes2{
+        margin-left: 182px;
+    }
+    input#yes3{
+        margin-left: 8px;
+    }
+    input#no1{
+        margin-left: 45px;
+    }
+    input#no2{
+        margin-left: 45px;
+    }
+    input#no3{
+        margin-left: 45px;
+    }
+    .grey2 {
+        background-color:chartreuse
+    }
+    .setboxS{
+        width: 150px
+    }
+    .setresult{
+        padding: 20px
+    }
+    </style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="img/BatteryIcons.png" alt="" height="60px" width="200px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="#">home</a></li>
+                                        <li><a class="datainput">Data Input</a></li>
+                                        <li><a class="Calculation">Calculation</a></li>
+                                        <li><a href="#"><b style="color: brown">Testing Menu Bar </b><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a class="SCT">Short Circuit Test</a></li>
+                                                <li><a class="CRAR">Charge Retention And Recovery</a></li>
+                                                <li><a class="CRAS">Charge Recovery After Storage</a></li>
+                                                <li><a class="EIC">Enduarance In Cycles</a></li>
+                                                <li><a class="CCS">Continuous Charge Set</a></li>
+                                                <li><a class="DORC">Details of Rated Capacity</a></li>
+                                                <li><a class="OVT">Over Charge Test</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><b style="color: brown">Charts </b><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a class="CVT">Current vs time</a></li>
+                                                <li><a class="VVT">Voltage vs time</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a class="result">Result sheet</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            <div class="social_media_links">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area ">
+        <div class="slider_area_inner slider_bg_1 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="single_slider">
+                            <div class="slider_text">Li-Iron Battery Test Bench
+                                <h3>Li-Iron Battery <br>
+                                    Test Bench</h3>
+                                <p>Test With RealTime DataBase</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <div class="our_loyers">
+        <div class="container">
+            <div class="chart" id="curve_chart" style="width: 100%; height: 400px"></div>
+        </div>
+    </div>
+    <!-- data input down_area _start  -->
+    <div class="about_area datainputdown">
+        <div class="opacity_icon d-none d-lg-block">
+            <i class="flaticon-balance"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <img src="img/about/datainput.png" alt="">
+                        </div>
+                        <h3>Input the Basic Data Here</h3>
+                        <div class="grid-container" style="background-color:antiquewhite">
+                            <div class="item1">Battery Status</div>
+                            <div class="item2">
+                                <span>
+                                    <label class="radio-inline">
+                                        <input type="radio" value="off" id="myRadio3" name="last2">Charging
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" value="on" id="myRadio4" name="last2">Discharging
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="item1">Put the Value of I<sub>t</sub></div>
+                            <div class="item4"><input class="setboxS"type="text" id="ivalue" value=""></div>
+                            <div class="item1">Put the Value of T</div>
+                            <div class="item4"><input class="setboxS" type="text" id="tvalue" value=""></div>
+                            <div class="item1">Rated Capasity of Fresh Battrey</div>
+                            <div class="item4"><input class="setboxS" type="text" id="rcvalue" value=""></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <img src="img/about/database.png" alt="">
+                        </div>
+                        <h3>Data from the RealTime DataBase</h3>
+                        <div class="grid-container" style="background-color:antiquewhite">
+                            <div class="item1">Temperature now</div>
+                            <div class="item4"><input class="setboxS" type="text" id="temvalue" value=""></div>
+                            <div class="item1">Date</div>
+                            <div class="item4"><input class="setboxS" type="text" id="datevalue" value=""></div>
+                            <div class="item1">Time</div>
+                            <div class="item4"><input class="setboxS" type="text" id="timevalue" value=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area _end -->
+
+    <!-- practice_area_start -->
+
+    <!-- data input down_area _start  -->
+    <div class="about_area ">
+        <div class="opacity_icon d-none d-lg-block">
+            <i class="flaticon-balance"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 Calculationdown ">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <img src="img/about/calclate.png" alt="">
+                        </div>
+                        <h3>Calulation of RC/SOH/SOC</h3>
+                        <div class="grid-container2" style="background-color:aquamarine">
+                            <div class="item1">
+                                <span class="box" style="font-size:16px;font-weight: bold;text-align:center;margin-bottom:5px; display: inline-block; width: 50%;">
+                                    Rated Capacity =
+                                </span>
+                            </div>
+                            <div class="item4">
+                                <input class="setboxS" type="text" id="rc" name="rc">
+                            </div>
+                            <div class="item1">
+                                <span class="box" style="font-size:16px;font-weight: bold;text-align:center;margin-bottom:5px; display: inline-block;">
+                                    State of Health (SOH) =
+                                </span>
+                            </div>
+                            <div class="item4"> <input class="setboxS" type="text" id="soh" name="soh"></div>
+                            <div class="item1">
+                                <span class="box" style="font-size:16px;font-weight: bold;text-align:center;margin-bottom:5px; display: inline-block;">
+                                    State of Charge (SOC) =
+                                </span>
+                            </div>
+                            <div class="item4"><input class="setboxS" type="text" id="soc" name="soc" value=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 OVTdown">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Over charge Test</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="margin-bottom:15px">Please Follow The Below Steps</span>
+                        <div style="margin-bottom:20px">
+                            <ol>
+                                <li>Discharge the battray at 20C plus or mines 5C at aconstant current of 0.2I A to a specific final voltage</li>
+                                <li>Charge the battary with the recommened chage current( Irec) specfic by the manufacture</li>
+                            </ol>
+                        </div>
+                        <div class="bracket" style="font-size:26px;font-weight: bold;text-align:center;margin-bottom:50px;color:blue">
+                            The Duration of the test time (in hours)=2.5C/Irec
+                        </div>
+                        <div style="font-size:18px;font-weight: bold;text-align:left;margin-bottom:10px;"> Observations</div>
+                        <div style="font-size:16px;font-weight: bold;text-align:left;margin-bottom:10px;">
+                            <div>
+                                <span> Any Explotions?</span>
+                                <label class="radio-inline">
+                                    <input type="radio" name="A1" id="y1">YES
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="A1" id="n1">NO
+                                </label>
+                            </div>
+                            <div>
+                                <span> Any Fire?</span>
+                                <label class="radio-inline">
+                                    <input type="radio" name="F1" id="y2">YES
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="F1" id="n2">NO
+                                </label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area _end -->
+
+    <!-- data input down_area _start  -->
+    <div class="about_area grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 SCTdown">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Short Circuit Test</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Short Circuit Test</h3>
+                        <br />
+                        <p>
+                            Please Follow the below Steps<br />
+                            1. Conduct two seperate tests, one in ambient temperature of 20&#176;C &#177; 5&#176;C and one in an ambient temperature of 55&#176;C &#177; 2&#176;C<br />
+                            (external resistance should be less than 50m&#937;)<br />
+                            2. Continue the tests until the battery voltage falls below 0.1V or the electronic circuit or the current limiting device prevents further discharge and the cell case temperature has returned to a value within 10&#176;C of
+                            the original temperature.<br />
+                        </p>
+                        <h3>Observations :-&emsp; YES&emsp;NO</h3>
+                        <div>
+                            <span>Any Explotions? </span>
+                            <span><input type="checkbox" name="yes1" id="yes1" /></span>
+                            <span><input type="checkbox" name="no1" id="no1" /></span>
+                        </div>
+                        <br />
+                        <div>
+                            <span>Fire?</span>
+                            <span><input type="checkbox" name="yes2" id="yes2" /></span>
+                            <span><input type="checkbox" name="no2" id="no2" /></span>
+                        </div>
+                        <br />
+                        <div>
+                            <span>Exterior temperature than 150&#176;C?</span>
+                            <span><input type="checkbox" name="yes3" id="yes3" /></span>
+                            <span><input type="checkbox" name="no3" id="no3" /></span>
+                        </div>
+                        <br />
+
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 CRASdown">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Charge Recovery After Storage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Charge Recovery After Storage</h3>
+
+                        <p>
+                            <h3>Please Follow the below Steps</h3>
+                            1. Choose the battery accordence with the method declared by the manufacturer.<br />
+                            2.Discharge the battery until the specified end-of discharge voltage.<br />
+                            (In an //notclear temperature of 20&#176;C //notclear a constant current at 0.2 //notclear)<br />
+                            3.Store the battery in open circuit, in an //notclear temperature of 40&#176;C &#177; 2&#176;C for 90 days.<br />
+                            4.Charge the battery.<br />
+                            5.Discharge the battery.<br />
+                        </p>
+                        <br />
+                        <h3>Charge recovery after Storage = <input type="text" value="0"> Ah</h3>
+                        <p>(//notclear)</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area _end -->
+
+
+    <!-- data input down_area _start  -->
+    <div class="about_area grey ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 EICdown grey">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Endurence in Cycles</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Endurence in Cycles</h3>
+                        <div>
+                    
+                            <span style="font-size:22px;font-weight: bold;margin-bottom:15px">Please Follow The Below Steps</span>
+                            <div style="margin-bottom:40px">
+                                <ol>
+                                    <li>Charge the battray compltely according with the method declared by the manufacuture </li>
+                                    <li>Discharge the battary in ambront temp. of 20&#176;C &#177; 5&#176;C At a constant curret of 0.2I A until the voltage equal to the specfied end of discharge voltage.</li>
+                                    <li>Charge the battery according with the declared by the manufactureor. ( the battery should be stored between charge-discharge and discharge-charge for up to 1 hour).</li>
+                                    <li>Repeat step 2 and 3 until the dischare capacity is less than 60% of the rated capasity.</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <span class="box" style="font-size:16px;font-weight: bold;text-align:left;margin-bottom:50px;">
+                                    Endurence in Cycles =
+                                    <input id="enocy" type="text" name="Eincyle" value="not yet updated">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 CCSdown grey">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Countiunes Charge Test</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Countiunes Charge Test</h3>
+                        <span style="font-size:22px;font-weight: bold;margin-bottom:15px">Please Follow The Below Steps</span>
+                        <div style="margin-bottom:25px">
+                            <ol>
+                                <li>Charge the battray according with the method declared by the manufacuture </li>
+                                <li>Hold the battary at the specfied end-of-charge voltage for a total period of 28 days.</li>
+                            </ol>
+                        </div>
+                        <div style="font-size:18px;font-weight: bold;text-align:left;margin-bottom:10px;"> Observations</div>
+                        <div style="text-align:left;margin-bottom:50px;">
+                            <div>
+                                <span> Any Leakages?</span>
+                                <label class="radio-inline">
+                                    <input type="radio" id="y11" name="A1">YES
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="n11" name="A1">NO
+                                </label>
+                            </div>
+                            <div>
+                                <span> Any Venting?</span>
+                                <label class="radio-inline">
+                                    <input type="radio" id="y22" name="A2">YES
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="n22" name="A2">NO
+                                </label>
+                            </div>
+                            <div>
+                                <span> Any Explotion?</span>
+                                <label class="radio-inline">
+                                    <input type="radio" id="y33" name="F1">YES
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="n33" name="F1">NO
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area _end -->
+
+    <!-- data input down_area _start  -->
+    <div class="about_area grey">
+        <div class="container ">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 DORCdown grey">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Rated Capacity</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Rated Capacity</h3>
+                        <div>
+                            <span style="font-size:22px;font-weight: bold;margin-bottom:15px">Please Follow The Below Steps</span>
+                            <div style="margin-bottom:80px">
+                                <ol>
+                                    <li>Charge the battray according to the method declared by the manufacuturer.</li>
+                                    <li>Store the battary in ambient temperature of 20&#176;C &#177; 5&#176;C for not less than 1hour and not more than 4hours.</li>
+                                    <li>Discharge the battery in ambient temperature of 20&#176;C &#177; 5&#176;C at a constant current of 0.2I<sub>t</sub>A until the battery voltage is less than or equal to the specified end of discharge voltage.</li>
+                                </ol>
+                            </div><br />
+                            <div>
+                                <ul>
+                                    <li>The Rated capacity of the battery:</li>
+                                </ul>
+                                <br />
+                                <pre>             = (0.2I<sub>t</sub>) x T</pre>
+                                <pre>             = <input type="text" name="RatedCapacity" id="rc2" value=""/> Ah</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="single_about_info text-center CRARdown grey">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    
+                                    <span>Charge Retention And Recovery</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Charge Retention And Recovery</h3>
+                        <span style="font-size:22px;font-weight: bold;margin-bottom:15px">Please Follow The Below Steps</span>
+                        <div style="margin-bottom:80px">
+                            <ol>
+                                <li>Charge the battery compltely according to the method declared by the manufacuturer. </li>
+                                <li>Store the battery on open circuit in an ambient temperature of 20&#176;C &#177; 5&#176;C for 28 days.</li>
+                                <li>Discharge the battary in an ambiont temp. of 20&#176;C &#177; 5&#176;C at a constant current of 0.2I<sub>t</sub>A until the battery voltage is less than or equal to the specfied end of discharge voltage.</li>
+                                The 
+                                <li><input /></li>
+                                <li>Charge the battery according with the declared by the manufactureor. ( the battery should be stored between charge-discharge and discharge-charge for up to 1 hour).</li>
+                                <li>Repeat step 2 and 3 until the dischare capacity is less than 60% of the rated capasity.</li>
+                            </ol>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area _end -->
+    <!-- footer_start -->
+    <footer class="resultdown grey2 setresult">
+        <h1 style="text-align: center;font-weight: bold">Result Sheet</h1>
+
+        <div>
+            <span>Rated Capacity = </span><span><input id="rca" type="text" /></span>
+        </div>
+        <br />
+        <div><span>State of Health = </span><span><input id="sohe" type="text" /></span></div>
+        <br />
+        <div>
+            <p>
+                The SOH Test was performed considering only the capacity because battery capacsity deteriorate fairly linearly with age or cycle life.
+                But other than the capacity, internal resistance, self-discharge acceptance, discharge capabilities might also effect the SOH.)
+            </p>
+        </div>
+        <div><span>Enduarance in Cycles = </span><span><input id="enc" type="text" value="not yet updated"/></span><span> cycles</span></div>
+        <br />
+        <div><span>Charge Retention And Recovery = </span><span><input id="Rcrar" type="text" value="null"/></span><span> % of Rated Capacity</span></div>
+        <br />
+        <div><span>Charge Recovery After Storage = </span><span><input id="Rcras"type="text" value="null"/></span><span> % of Rated Capacity</span></div>
+        <br />
+        <div><p><h3>Short Circuit Test</h3></p><br /><p id="sct"></p></div>
+        <div><p><h3>Continuous Charge Test</h3></p><br /><p id="cct"></p></div>
+        <div><p><h3>Over Charge Test</h3></p><br /><p id="oct"></p></div>
+
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrdown.js"></script>
+    <script src="js/indexjs.js"></script>
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+</body>
+
+</html>
+
